@@ -1,0 +1,7 @@
+{
+  "name": "Admobs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
