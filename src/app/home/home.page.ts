@@ -20,6 +20,4 @@ export class HomePage {
       initializeForTesting: true,
     });
   }
-
-  async showRewardVideo() {}
 }
