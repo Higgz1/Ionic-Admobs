@@ -19,6 +19,9 @@ export class RewardVideoComponent implements OnInit {
   ngOnInit() {}
 
   async showRewardVideo() {
+    //get ids for banner and others from created admob adunit.
+    // note ids are production only ,so only use them in prod
+    // if testing or dev use blank or dummy string as below for ids
     const adId = isPlatform('ios') ? 'ios-ad-id' : 'android-ad-id';
 
     AdMob.addListener(RewardAdPluginEvents.Loaded, (info: AdLoadInfo) => {

@@ -18,6 +18,9 @@ export class InterstitialComponent implements OnInit {
   ngOnInit() {}
 
   async showInterstitial() {
+    //get ids for banner and others from created admob adunit.
+    // note ids are production only ,so only use them in prod
+    // if testing or dev use blank or dummy string as below for ids
     const adId = isPlatform('ios') ? 'ios-ad-id' : 'android-ad-id';
 
     AdMob.addListener(InterstitialAdPluginEvents.Loaded, (info: AdLoadInfo) => {
@@ -25,7 +28,7 @@ export class InterstitialComponent implements OnInit {
     });
 
     const options: AdOptions = {
-      adId: 'YOUR ADID',
+      adId,
       // isTesting: true
       // npa: true
     };
